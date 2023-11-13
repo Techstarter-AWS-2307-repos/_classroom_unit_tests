@@ -12,7 +12,7 @@ from add_numbers import add_two_numbers
 class TestAddTwoNumbers(unittest.TestCase):
     def test_file_exists(self):
         file_name = self.__module__.split(".")[-1] + ".py"
-        self.assertTrue(parent_dir.isfile(file_name), f"{file_name} does not exist")
+        self.assertTrue(parent_dir.is_file(file_name), f"{file_name} does not exist")
 
     def test_addition(self):
         self.assertEqual(add_two_numbers(1, 2), 3)
