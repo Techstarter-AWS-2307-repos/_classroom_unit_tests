@@ -5,7 +5,9 @@ import subprocess
 def run_flake8():
     # führt flake8 aus und gibt die Anzahl der Probleme zurück
     result = subprocess.run(
-        ["flake8", "../", "--count", "--exclude=unittests/"], stdout=subprocess.PIPE, text=True
+        ["flake8", "../", "--count", "--exclude=unittests/"],
+        stdout=subprocess.PIPE,
+        text=True,
     )
     output = result.stdout.strip()
 
